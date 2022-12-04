@@ -6,9 +6,15 @@ class Home extends BaseController
 {
     public function index()
     {
-        // return view('page/admin/dataPendaftar/edit_data_pendaftar.php');
-        // return view('page/global/dashboard');
-        //  return view('page/admin/mataKuliah/read');
-         return view('page/mahasiswa/pengumuman_asdos.php');
+        if(session()->get('logged_in')){
+            return view('page/global/dashboard');
+        }
+        return redirect()->to(base_url('/login'));
+    }
+    public function login(){
+        if(session()->get('logged_in')){
+            return redirect()->back();
+        }
+        return view('auth/login_or_regis');
     }
 }
