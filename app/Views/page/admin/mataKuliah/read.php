@@ -10,9 +10,11 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h4>Data Pendaftar</h4>
+                <h4>Data Matakuliah</h4>
+                
             </div>
             <div class="card-body">
+                <a href="" class="btn btn-outline-primary mb-3"><i class="bi bi-plus-lg"></i> Tambah Mata Kuliah</a>
                 <div class="table-responsive">
                     <table id="tabel1" class="display" style="width:100%">
                         <thead>
@@ -40,9 +42,13 @@
                                     Dibuka
                                 </td>
                                 <td class="align-middle text-center">
-                                    <a href="#" class="btn btn-icon btn-primary mr-5 ml-3"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="btn btn-icon btn-danger mr-5"><i class="fas fa-trash"></i></a>
-                                    <a href="#" class="btn btn-icon btn-warning mr-5"><i class="fas fa-edit"></i></a>
+                                    <form action=" " method="post">
+                                        <?= csrf_field() ?>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Detail" href="#" class="btn btn-icon btn-primary mr-5"><i class="fas fa-eye"></i></a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" href="#" class="btn btn-icon btn-warning mr-5 ml-3"><i class="fas fa-edit"></i></a>
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" type="submit" class="btn btn-icon btn-danger mr-5 ml-3 fas fa-trash" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?');"><i class="bi bi-trash"></i></button>
+                                    </form>
                                 </td>
                             </tr>
 

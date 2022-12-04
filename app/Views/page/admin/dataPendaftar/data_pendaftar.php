@@ -41,7 +41,7 @@
                                 <td class="align-middle text-center">
                                     <form action=" " method="post">
                                         <?= csrf_field() ?>
-                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" href="#" class="btn btn-icon btn-primary mr-5"><i class="fas fa-eye"></i></a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Detail" href="#" class="btn btn-icon btn-primary mr-5"><i class="fas fa-eye"></i></a>
                                         <a data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" href="#" class="btn btn-icon btn-warning mr-5 ml-3"><i class="fas fa-edit"></i></a>
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" type="submit" class="btn btn-icon btn-danger mr-5 ml-3 fas fa-trash" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?');"><i class="bi bi-trash"></i></button>
