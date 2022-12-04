@@ -10,11 +10,9 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h4>Data Matakuliah</h4>
-                
+                <h4>Data Pendaftar</h4>
             </div>
             <div class="card-body">
-                <a href="" class="btn btn-outline-primary mb-3"><i class="bi bi-plus-lg"></i> Tambah Mata Kuliah</a>
                 <div class="table-responsive">
                     <table id="tabel1" class="display" style="width:100%">
                         <thead>
@@ -22,11 +20,11 @@
                                 <th class="text-center">
                                     No
                                 </th>
-                                <th>Mata Kuliah</th>
+                                <th>Nama</th>
+                                <th>NPM</th>
                                 <th>Semester</th>
                                 <th>Status</th>
 
-                                <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,22 +32,17 @@
                                 <td class="align-middle text-center">
                                     1
                                 </td>
-                                <td class="align-middle">RPL</td>
+                                <td class="align-middle">Create a mobile app</td>
+                                <td class="align-middle">
+                                    2017051062
+                                </td>
                                 <td class="align-middle">
                                     3
                                 </td>
                                 <td>
-                                    Dibuka
+                                    Asdos Matematika
                                 </td>
-                                <td class="align-middle text-center">
-                                    <form action=" " method="post">
-                                        <?= csrf_field() ?>
-                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Detail" href="#" class="btn btn-icon btn-primary mr-5"><i class="fas fa-eye"></i></a>
-                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" href="#" class="btn btn-icon btn-warning mr-5 ml-3"><i class="fas fa-edit"></i></a>
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" type="submit" class="btn btn-icon btn-danger mr-5 ml-3 fas fa-trash" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?');"><i class="bi bi-trash"></i></button>
-                                    </form>
-                                </td>
+                               
                             </tr>
 
                         </tbody>
