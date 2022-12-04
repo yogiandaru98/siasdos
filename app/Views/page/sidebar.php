@@ -45,7 +45,7 @@
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="/stisla/dist/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-                            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div>
+                            <div class="d-sm-none d-lg-inline-block"><?= session()->get('nama') ?></div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
 
@@ -63,13 +63,13 @@
                         <a href="/">SIASDOS</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">ASDOS</a>
+                        <a href="/">ASDOS</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">MENU</li>
                         <li class="dropdown">
                         <li class="active">
-                            <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                            <a href="/" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
 
                         </li>
                         <li class="active">
@@ -77,15 +77,15 @@
 
                         </li>
                         <li class="active">
-                            <a href="#" class="nav-link"><i class="far fa-file-alt"></i><span>Pengumuman</span></a>
+                            <a href="/pengumuman" class="nav-link"><i class="far fa-file-alt"></i><span>Pengumuman</span></a>
 
                         </li>
                         <li class="active">
-                            <a href="#" class="nav-link"><i class="fa fa-book"></i><span>Mata Kuliah</span></a>
+                            <a href="/mata_kuliah" class="nav-link"><i class="fa fa-book"></i><span>Mata Kuliah</span></a>
 
                         </li>
                         <li class="active">
-                            <a href="#" class="nav-link"><i class="fas fa-columns"></i><span>Pendaftaran</span></a>
+                            <a href="/pendaftaran" class="nav-link"><i class="fas fa-columns"></i><span>Pendaftaran</span></a>
                         </li>
 
                         <li class="active">
@@ -102,7 +102,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>$title</h1>
+                        <h1><?= $title ?></h1>
                     </div>
 
                     <div class="section-body">
@@ -122,21 +122,7 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="/stisla/dist/assets/modules/jquery.min.js"></script>
-    <script src="/stisla/dist/assets/modules/popper.js"></script>
-    <script src="/stisla/dist/assets/modules/tooltip.js"></script>
-    <script src="/stisla/dist/assets/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/stisla/dist/assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="/stisla/dist/assets/modules/moment.min.js"></script>
-    <script src="/stisla/dist/assets/js/stisla.js"></script>
 
-    <!-- JS Libraies -->
-
-    <!-- Page Specific JS File -->
-
-    <!-- Template JS File -->
-    <script src="/stisla/dist/assets/js/scripts.js"></script>
-    <script src="/stisla/dist/assets/js/custom.js"></script>
 </body>
 
 </html>

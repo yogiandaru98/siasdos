@@ -26,7 +26,12 @@ class Home extends BaseController
         return view('auth/login_or_regis');
     }
     public function pengumuman(){
-        return view('page/admin/pengumuman');
+
+        $data = [
+            'title' => 'Pengumuman',
+            
+        ];
+        return view('page/admin/pengumuman',$data);
     }
     public function storePengumuman(){
         $data = [

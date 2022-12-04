@@ -54,16 +54,10 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="stisla/dist/assets/css/style.css">
   <link rel="stylesheet" href="stisla/dist/assets/css/components.css">
-    <title> $title</title>
+    <title> <?= $title ?></title>
 </head>
 
 <body>
-    <!-- include sidebar -->
-    <?= $this->include('page/sidebar'); ?>
-
-    <!-- rendersection -->
-    <?= $this->renderSection('content') ?>
-
     <!-- JS -->
     <script src="/stisla/dist/assets/modules/jquery.min.js"></script>
     <script src="/stisla/dist/assets/modules/popper.js"></script>
@@ -122,10 +116,30 @@
     <script src="stisla/dist/assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
 
     <!-- Page Specific JS File -->
+    <script src="/stisla/dist/assets/modules/jquery.min.js"></script>
+    <script src="/stisla/dist/assets/modules/popper.js"></script>
+    <script src="/stisla/dist/assets/modules/tooltip.js"></script>
+    <script src="/stisla/dist/assets/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/stisla/dist/assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="/stisla/dist/assets/modules/moment.min.js"></script>
+    <script src="/stisla/dist/assets/js/stisla.js"></script>
 
+    <!-- JS Libraies -->
+
+    <!-- Page Specific JS File -->
+
+    <!-- Template JS File -->
+    <script src="/stisla/dist/assets/js/scripts.js"></script>
+    <script src="/stisla/dist/assets/js/custom.js"></script>
     <!-- Template JS File -->
     <script src="stisla/dist/assets/js/scripts.js"></script>
     <script src="stisla/dist/assets/js/custom.js"></script>
+    <!-- include sidebar -->
+    <?= $this->include('page/sidebar'); ?>
+
+    <!-- rendersection -->
+    <?= $this->renderSection('content') ?>
+
 </body>
 
 </html>
