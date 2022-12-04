@@ -2,7 +2,10 @@
 
 <?= $this->section('content') ?>
 
-
+<link rel="stylesheet" href="stisla/dist/assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="stisla/dist/assets/modules/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="stisla/dist/assets/modules/codemirror/theme/duotone-dark.css">
+  <link rel="stylesheet" href="stisla/dist/assets/modules/jquery-selectric/selectric.css">
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -34,6 +37,9 @@
         </div>
     </div>
 </div>
-
+<script src="stisla/dist/assets/modules/summernote/summernote-bs4.js"></script>
+    <script src="stisla/dist/assets/modules/codemirror/lib/codemirror.js"></script>
+    <script src="stisla/dist/assets/modules/codemirror/mode/javascript/javascript.js"></script>
+    <script src="stisla/dist/assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
 
 <?= $this->endSection() ?>
