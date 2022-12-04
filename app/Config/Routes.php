@@ -36,6 +36,24 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/login','Home::login');
+$routes->post('/login/action','AuthController::login');
+$routes->post('/register/action','AuthController::register');
+$routes->get('/logout','AuthController::logout');
+$routes->get('/pengumuman','Home::pengumuman');
+$routes->post('/pengumuman/store','Home::storePengumuman');
+
+//nmata kuliah
+$routes->get('/mata_kuliah','MataKuliahController::index');
+$routes->get('/mata_kuliah/create/','MataKuliahController::create');
+$routes->post('/matakuliah/store','MataKuliahController::store');
+
+$routes->get('/matakuliah/edit/(:num)','MataKuliahController::edit/$1');
+$routes->post('/matakuliah/delete/(:num)','MataKuliahController::delete/$1');
+$routes->post('/matakuliah/update','MataKuliahController::update');
+
+//mahasiswa
+$routes->get('/pendaftaran','MahasiswaController::index');
 
 /*
  * --------------------------------------------------------------------

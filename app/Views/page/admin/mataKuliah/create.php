@@ -9,19 +9,19 @@
             </div>
             <div class="card-body">
 
-                <form action="" method="post">
+                <form action="/matakuliah/store" method="post">
                     <div class="form-group">
                         <label>Nama Mata Kuliah</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="nama_mk">
                     </div>
 
                     <div class="form-group">
                         <label>Semester</label>
-                        <input type="number" class="form-control">
+                        <input type="number" class="form-control" name="semester">
                     </div>
                     <div class="form-group">
                         <label>Status</label>
-                        <select class="form-control">
+                        <select class="form-control" name="status">
                             <option selected value="1">Dibuka</option>
                             <option value="0">Ditutup</option>
                         </select>

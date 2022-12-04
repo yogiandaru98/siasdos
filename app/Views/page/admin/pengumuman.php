@@ -10,24 +10,26 @@
                 <h4>Buat Pengumuman</h4>
             </div>
             <div class="card-body">
-                <div class="form-group row mb-4">
-                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
-                    <div class="col-sm-12 col-md-7">
-                        <input type="text" class="form-control">
+                <form action="/pengumuman/store" method="post">
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
+                        <div class="col-sm-12 col-md-7">
+                            <input type="text" class="form-control" name="judul">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row mb-4">
-                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Isi</label>
-                    <div class="col-sm-12 col-md-7">
-                        <textarea class="summernote-simple"></textarea>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Isi</label>
+                        <div class="col-sm-12 col-md-7">
+                            <textarea name="isi" class="summernote-simple"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row mb-4">
-                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                    <div class="col-sm-12 col-md-7">
-                        <button class="btn btn-primary">Publish</button>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                        <div class="col-sm-12 col-md-7">
+                            <button class="btn btn-primary">Publish</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
