@@ -22,32 +22,27 @@
                                 </th>
                                 <th>Nama</th>
                                 <th>NPM</th>
+
                                 <th>Status</th>
                                 <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="align-middle text-center">
-                                    1
-                                </td>
-                                <td class="align-middle">Create a mobile app</td>
-                                <td class="align-middle">
-                                    2017051062
-                                </td>
-                                <td>
-                                    matematika
-                                </td>
-                                <td class="align-middle text-center">
-                                    <form action=" " method="post">
-                                        <?= csrf_field() ?>
-                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Detail" href="#" class="btn btn-icon btn-primary mr-5"><i class="fas fa-eye"></i></a>
-                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" href="#" class="btn btn-icon btn-warning mr-5 ml-3"><i class="fas fa-edit"></i></a>
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" type="submit" class="btn btn-icon btn-danger mr-5 ml-3 fas fa-trash" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?');"><i class="bi bi-trash"></i></button>
-                                    </form>
-                                </td>
-                            </tr>
+                            <?php $index = 1;
+                            foreach ($pendaftar as $item) : ?>
+                                <tr>
+                                    <td><?= $index; ?></td>
+                                    <td><?= $item['nama']; ?></td>
+                                    <td><?= $item['NPM'] ?></td>
+                                    <td><?= $item['status'] ?></td>
+                                    <td class="align-middle text-center">
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Detail" href="/data_pendaftar/view/<?= $item['id_user'] ?>" class="btn btn-icon btn-primary mr-5"><i class="fas fa-eye"></i></a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" href="/data_pendaftar/edit/<?= $item['id_user'] ?>" class="btn btn-icon btn-warning mr-5 ml-3"><i class="fas fa-edit"></i></a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" href="/data_pendaftar/delete/<?= $item['id_user'] ?>" class="btn btn-icon btn-danger mr-5 ml-3"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            <?php $index++;
+                            endforeach; ?>
 
                         </tbody>
 

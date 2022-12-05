@@ -23,8 +23,7 @@
                         </div>
                     </div>
                 <?php else : ?>
-
-                    <form action="/pendaftaran/store" method="post">
+                    <form action="/pendaftaran/store" method="post" enctype="multipart/form-data"'>
                         <div class="form-group">
                             <label>Kelas</label>
                             <input type="text" class="form-control" name="kelas">
@@ -39,32 +38,34 @@
                         </div>
                         <div class="form-group">
                             <label>Pilihan 1</label>
-                            <select class="form-control select2">
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                            <select class="form-control select2" name="pilihan1">
+                                <?php foreach ($mata_kuliah as $item): ?>
+                                    <option value="<?= $item['id_mk'] ?>"><?= $item['nama_mk'] ?></option>
+                                <?php endforeach;?>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Pilihan 2</label>
-                            <select class="form-control select2">
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                            <select class="form-control select2" name="pilihan2">
+                                <?php foreach ($mata_kuliah as $item): ?>
+                                    <option value="<?= $item['id_mk'] ?>"><?= $item['nama_mk'] ?></option>
+                                <?php endforeach;?>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Pilihan 3</label>
-                            <select class="form-control select2">
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                            <select class="form-control select2" name="pilihan3">
+                                <?php foreach ($mata_kuliah as $item): ?>
+                                    <option value="<?= $item['id_mk'] ?>"><?= $item['nama_mk'] ?></option>
+                                <?php endforeach;?>
                             </select>
                         </div>
                         <div class="form-group">
                             <div class="custom-file">
-                                <input type="file" name="site_logo" class="custom-file-input" id="site-logo">
+                                <input type="file"  class="custom-file-input" id="site-logo" name="file">
                                 <label class="custom-file-label">Upload Transkrip</label>
+
+
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary mt-3">Simpan</button>

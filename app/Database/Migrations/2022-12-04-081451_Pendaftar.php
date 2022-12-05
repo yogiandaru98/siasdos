@@ -29,6 +29,21 @@ class Pendaftar extends Migration
             'status' => [
                 'type' => 'TEXT',
             ],
+            'transkrip' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'IPK' => [
+                'type' => 'double',
+            ],
+            'kelas' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'semester' => [
+                'type' => 'INT',
+                'constraint' => '1',
+            ],
             'created_at' => [
                 'type' => 'DATETIME',
                 'null' => true,
