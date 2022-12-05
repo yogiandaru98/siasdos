@@ -72,28 +72,28 @@
                             <a href="/" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
 
                         </li>
-                        <li class="active">
-                            <a href="#" class="nav-link"><i class="fas fa-columns"></i><span>Data Pendaftar</span></a>
+                        <?php if (session()->get('is_admin') > 0) : ?>
+                            <li class="active">
+                                <a href="/data_pendaftar/" class="nav-link"><i class="fas fa-columns"></i><span>Data Pendaftar</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="/pengumuman" class="nav-link"><i class="far fa-file-alt"></i><span>Pengumuman</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="/mata_kuliah" class="nav-link"><i class="fa fa-book"></i><span>Mata Kuliah</span></a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if (session()->get('is_admin') < 1) : ?>
+                            <li class="active">
+                                <a href="/pendaftaran" class="nav-link"><i class="fas fa-columns"></i><span>Pendaftaran</span></a>
+                            </li>
 
-                        </li>
-                        <li class="active">
-                            <a href="/pengumuman" class="nav-link"><i class="far fa-file-alt"></i><span>Pengumuman</span></a>
+                            <li class="active">
+                                <a href="#" class="nav-link"><i class="far fa-file-alt"></i><span>Pengumuman Asdos</span></a>
+                            </li>
 
-                        </li>
-                        <li class="active">
-                            <a href="/mata_kuliah" class="nav-link"><i class="fa fa-book"></i><span>Mata Kuliah</span></a>
-
-                        </li>
-                        <li class="active">
-                            <a href="/pendaftaran" class="nav-link"><i class="fas fa-columns"></i><span>Pendaftaran</span></a>
-                        </li>
-
-                        <li class="active">
-                            <a href="#" class="nav-link"><i class="far fa-file-alt"></i><span>Pengumuman Asdos</span></a>
-
-                        </li>
-
-                        </li>
+                            </li>
+                        <?php endif; ?>
 
                 </aside>
             </div>

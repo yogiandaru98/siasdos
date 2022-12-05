@@ -47,13 +47,19 @@ $routes->post('/pengumuman/store','Home::storePengumuman');
 $routes->get('/mata_kuliah','MataKuliahController::index');
 $routes->get('/mata_kuliah/create/','MataKuliahController::create');
 $routes->post('/matakuliah/store','MataKuliahController::store');
-
 $routes->get('/matakuliah/edit/(:num)','MataKuliahController::edit/$1');
 $routes->post('/matakuliah/delete/(:num)','MataKuliahController::delete/$1');
 $routes->post('/matakuliah/update','MataKuliahController::update');
 
 //mahasiswa
 $routes->get('/pendaftaran','MahasiswaController::index');
+$routes->post('/pendaftaran/store','MahasiswaController::store');
+//admin
+$routes->get('/data_pendaftar/','AdminController::index');
+
+$routes->get('/data_pendaftar/view/(:num)','AdminController::view/$1');
+$routes->get('/data_pendaftar/edit/(:num)','AdminController::edit/$1');
+$routes->get('/data_pendaftar/delete/(:num)','AdminController::delete/$1');
 
 /*
  * --------------------------------------------------------------------
